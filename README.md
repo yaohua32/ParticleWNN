@@ -89,20 +89,14 @@ kwargs = {  'N_particle': 200,     # The number of particles
 - The PDE of the 1d Poisson's problem ![poisson1d](./figures/poisson1d.png)
 - Run the file ```main_poisson_1d.py```
 
-<figure>
-<img src=./figures/poisson1d_15pi_l2.png width=200/>
-<img src=./figures/poisson1d_15pi_u.png width=200/>
-</figure>
+<figure> <img src=./figures/poisson1d_15pi_l2.png width=200/> <img src=./figures/poisson1d_15pi_u.png width=200/> </figure>
 
 ### The Allen-Cahn Problem
 
 - The mathematics model of the Allen-Cahn Problem: ![allen_cahn](./figures/allen_cahn_1d.png)
 - Run the file ```main_allen_cahn_1d.py```
 
-<figure>
-<img src=./figures/allen_cahn_u.png width=200/>
-<img src=./figures/allen_cahn_pred_ParticleWNN.png width=200/>
-</figure>
+<figure> <img src=./figures/allen_cahn_u.png width=200/> <img src=./figures/allen_cahn_pred_ParticleWNN.png width=200/> </figure>
 
 ### The steady NS Problem
 
@@ -111,11 +105,7 @@ kwargs = {  'N_particle': 200,     # The number of particles
     where $\nu$ indicates the viscosity coefficient; $\bm{u}=(u,v)$ and $p$ are the velocity field and the pressure field, respectively. This equation has the following analytical solution: ![NS_steady_sol](./figures/NS_steady_2d_sol.png)
 - Run the file ```main_NS_Kovasznay_2d.py```
 
-<figure>
-<img src=./figures/NS_steady_u_ParticleWNN.png width=145/>
-<img src=./figures/NS_steady_v_ParticleWNN.png width=145/>
-<img src=./figures/NS_steady_p_ParticleWNN.png width=145/>
-</figure>
+<figure> <img src=./figures/NS_steady_u_ParticleWNN.png width=150/> <img src=./figures/NS_steady_v_ParticleWNN.png width=150/> <img src=./figures/NS_steady_p_ParticleWNN.png width=150/> </figure>
 
 ### The 2d Inverse Problem
 
@@ -124,12 +114,7 @@ kwargs = {  'N_particle': 200,     # The number of particles
 where $\delta$ indicates Gaussian noise.
 - Run the file ```main_inverse_poisson_2d.py```
 
-<figure>
-<img src=./figures/inverse_a.png width=200/>
-<img src=./figures/inverse_u.png width=200/>
-<img src=./figures/inverse_001_k_ParticleWNN.png width=200/>
-<img src=./figures/inverse_001_u_ParticleWNN.png width=200/>
-</figure>
+<figure> <img src=./figures/inverse_a.png width=180/> <img src=./figures/inverse_u.png width=180/> <img src=./figures/inverse_001_k_ParticleWNN.png width=180/> <img src=./figures/inverse_001_u_ParticleWNN.png width=180/> </figure>
 
 ## References
 
