@@ -1,8 +1,8 @@
 # /*
 #  * @Author: yaohua.zang 
-#  * @Date: 2023-05-21 20:07:13 
+#  * @Date: 2023-09-26 20:35:43 
 #  * @Last Modified by:   yaohua.zang 
-#  * @Last Modified time: 2023-05-21 20:07:13 
+#  * @Last Modified time: 2023-09-26 20:35:43 
 #  */
 import numpy as np 
 import torch
@@ -13,15 +13,39 @@ class Error():
     def __init__(self):
         pass 
 
-    def L2_error(self, u_pred:torch.tensor, u:torch.tensor)->torch.tensor:
+    def L2_error(self, model:torch.nn.Module, x:torch.tensor, u:torch.tensor)->torch.tensor:
         '''
         Input: 
-                u_pred: size(?,1)
-                u: size(?,1)
-        Output: err: float
+            model: network model
+            x: size(?,d)
+            u: size(?,k)
+        Output: 
+            err:    size(1,k)
+            u_pred: size(?,k)
         '''
-        # Error 
-        err = torch.mean( (u_pred - u)**2 ) \
-            / (torch.mean(u**2) + sys.float_info.epsilon)
+        with torch.no_grad():
+            u_pred = model(x)
+            error = torch.mean( (u_pred - u)**2, dim=0) \
+                / (torch.mean(u**2, dim=0) + sys.float_info.epsilon)
         
-        return torch.sqrt(err).item()
+        return torch.sqrt(error), u_pred
+
+    def L2_error_Time(self, model:torch.nn.Module, x:torch.tensor, t:torch.tensor, 
+                      u:torch.tensor)->torch.tensor:
+        '''
+        Input: 
+            model: network model
+            x: size(?,d)
+            t: size(?,1)
+            u: size(?,k)
+        Output: 
+            err:    size(1,k)
+            u_pred: size(?,k)
+        '''
+        with torch.no_grad():
+            u_pred = model(x, t)
+            error = torch.mean( (u_pred - u)**2, dim=0) \
+                / (torch.mean(u**2, dim=0) + sys.float_info.epsilon)
+        
+        return torch.sqrt(error), u_pred
+
