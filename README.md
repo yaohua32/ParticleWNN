@@ -74,7 +74,7 @@ kwargs = {  'N_particle': 200,     # The number of particles
             'data_type': {'numpy':self.np_type, 'torch':self.torch_type},  
             'lr_Decay': 2.,        # The Decay rate 
             'loss_weight': {'eq':1., 'bd':5.}, # The weight of each loss 
-            'topK': 150,           # The topK
+            'topK': 150,           
             'int_method': 'mesh',  # The integration method
             'hidden_width': 50,    # The neurons in each layer of the DNN
             'hidden_layer': 3,     # The layers of the DNN
@@ -90,7 +90,7 @@ kwargs = {  'N_particle': 200,     # The number of particles
 - Run the file ```main_poisson_1d.py```
 
 <center> 
-<img src=./figures/poisson1d_15pi_l2.png width=200/> <img src=./figures/poisson1d_15pi_u.png width=200/>
+<img src=./figures/poisson1d_15pi_l2.png width=400/> <img src=./figures/poisson1d_15pi_u.png width=400/>
  </center>
 
 ### The Allen-Cahn Problem
@@ -99,29 +99,29 @@ kwargs = {  'N_particle': 200,     # The number of particles
 - Run the file ```main_allen_cahn_1d.py```
 
 <center> 
-<img src=./figures/allen_cahn_u.png width=200/> <img src=./figures/allen_cahn_pred_ParticleWNN.png width=200/>
+<img src=./figures/allen_cahn_u.png width=400/> <img src=./figures/allen_cahn_pred_ParticleWNN.png width=400/>
 </center>
 
 ### The steady NS Problem
 
 - In non-dimensional form, the mathematical model is given as:
-    ![NS_steady](./figures/NS_steady_2d.png)
-    where $\nu$ indicates the viscosity coefficient; $\bm{u}=(u,v)$ and $p$ are the velocity field and the pressure field, respectively. This equation has the following analytical solution: ![NS_steady_sol](./figures/NS_steady_2d_sol.png)
+    ![NS_steady](./figures/NS_steady.png)
+    where $\nu$ indicates the viscosity coefficient; $\bm{u}=(u,v)$ and $p$ are the velocity field and the pressure field, respectively. This equation has the following analytical solution: ![NS_steady_sol](./figures/NS_steady_sol.png)
 - Run the file ```main_NS_Kovasznay_2d.py```
 
 <center>
-<img src=./figures/NS_steady_u_ParticleWNN.png width=150/> <img src=./figures/NS_steady_v_ParticleWNN.png width=150/> <img src=./figures/NS_steady_p_ParticleWNN.png width=150/>
+<img src=./figures/NS_steady_u_ParticleWNN.png width=400/> <img src=./figures/NS_steady_v_ParticleWNN.png width=400/> <img src=./figures/NS_steady_p_ParticleWNN.png width=400/>
 </center>
 
 ### The 2d Inverse Problem
 
-- The mathematics model of the inverse problem:![inverse](./figures/inverse_poisson2d.png)
+- The mathematics model of the inverse problem:![inverse](./figures/inverse_poisson_2d.png)
     where $u$ is the solution of the equation, $f$ indicates the source term, and $a$ represents the coefficient. Given the source term $f$, the inverse problem is to identify the coefficient $a$ with inexact measurements $u^{\delta}$
 where $\delta$ indicates Gaussian noise.
 - Run the file ```main_inverse_poisson_2d.py```
   
 <center>
-<img src=./figures/inverse_a.png width=200/> <img src=./figures/inverse_u.png width=200/> <img src=./figures/inverse_001_k_ParticleWNN.png width=200/> <img src=./figures/inverse_001_u_ParticleWNN.png width=200/>
+<img src=./figures/inverse_a.png width=400/> <img src=./figures/inverse_u.png width=400/> <img src=./figures/inverse_001_k_ParticleWNN.png width=400/> <img src=./figures/inverse_001_u_ParticleWNN.png width=400/>
 </center>
 
 ## References
