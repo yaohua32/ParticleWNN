@@ -86,8 +86,7 @@ kwargs = {  'N_particle': 200,     # The number of particles
 
 ### The 1d Poisson's Problem
 
-- The PDE of the 1d Poisson's problem
-  $$ -\frac{\partial^2 u}{\partial x^2}(x) = f(x),\quad x\in \Omega=(-1,1), \\ u(x) = g(x),\quad x\in \partial\Omega. $$
+- The PDE of the 1d Poisson's problem ![poisson1d](./figures/poisson1d.png)
 - Run the file ```main_poisson_1d.py```
 
 <figure>
@@ -97,14 +96,7 @@ kwargs = {  'N_particle': 200,     # The number of particles
 
 ### The Allen-Cahn Problem
 
-- The mathematics model of the Allen-Cahn Problem
-    $$
-    \begin{cases}
-        u_t - \lambda u_{xx} + 5u^3 - 5u =0,\quad t\in(0,1],\ x\in[-1,1], \\
-        u(x,0) = x^2\cos(\pi x), \\
-        u(t,-1) = u(t,1),\ u_x(t,-1) = u_x(t,1),
-    \end{cases}
-    $$
+- The mathematics model of the Allen-Cahn Problem: ![allen_cahn](./figures/allen_cahn_1d.png)
 - Run the file ```main_allen_cahn_1d.py```
 
 <figure>
@@ -114,23 +106,9 @@ kwargs = {  'N_particle': 200,     # The number of particles
 
 ### The steady NS Problem
 
-- In non-dimensional form, the mathematical model is given as
-    $$
-    \begin{cases}
-        -\nu \Delta\bm{u} + (\bm{u}\cdot\nabla)\bm{u} + \nabla p = 0,\quad \text{in}\ \Omega=[-1,1]\times[-1,1], \\
-        \nabla\cdot\bm{u} = 0, \quad \text{in}\ \Omega
-    \end{cases}
-    $$
-    where $\nu$ indicates the viscosity coefficient; $\bm{u}=(u,v)$ and $p$ are the velocity field and the pressure field, respectively. This equation has the following analytical solution
-    $$
-    u(x,y) = 1-e^{\lambda x}\cos(\omega y),\quad
-    v(x,y) = \frac{\lambda}{\omega}e^{\lambda x}\sin(\omega y),\quad
-    p(x,y) = \frac{1}{2}(1-e^{2\lambda x}),
-    $$
-    where
-    $$
-    \lambda = \frac{1}{2\nu} - \sqrt{\frac{1}{4\nu^2} + \omega^2}.
-    $$
+- In non-dimensional form, the mathematical model is given as:
+    ![NS_steady](./figures/NS_steady_2d.png)
+    where $\nu$ indicates the viscosity coefficient; $\bm{u}=(u,v)$ and $p$ are the velocity field and the pressure field, respectively. This equation has the following analytical solution: ![NS_steady_sol](./figures/NS_steady_2d_sol.png)
 - Run the file ```main_NS_Kovasznay_2d.py```
 
 <figure>
@@ -141,10 +119,7 @@ kwargs = {  'N_particle': 200,     # The number of particles
 
 ### The 2d Inverse Problem
 
-- The mathematics model of the inverse problem:
-    $$
-            -\nabla \cdot(a(x,y) \nabla u) = f(x,y), \quad (x,y) \in\Omega=[-1,1]\times[-1,1],
-    $$
+- The mathematics model of the inverse problem:![inverse](./figures/inverse_poisson2d.png)
     where $u$ is the solution of the equation, $f$ indicates the source term, and $a$ represents the coefficient. Given the source term $f$, the inverse problem is to identify the coefficient $a$ with inexact measurements $u^{\delta}$ 
 where $\delta$ indicates Gaussian noise.
 - Run the file ```main_inverse_poisson_2d.py```
