@@ -87,13 +87,13 @@ kwargs = {  'N_particle': 200,     # The number of particles
 ### The 1d Poisson's Problem
 
 - The PDE of the 1d Poisson's problem
-  $$ \begin{cases} -\frac{\partial^2 u}{\partial x^2}(x) = f(x),\quad x\in \Omega=(-1,1), \\ u(x) = g(x),\quad x\in \partial\Omega. \end{cases} $$
-- Run the file ```mian_poisson_1d.py```
-- The result:
-    <figure>
-    <img src=./figures/poisson1d_15pi_l2.png width=200/>
-    <img src=./figures/poisson1d_15pi_u.png width=200/>
-    </figure>
+  $$ -\frac{\partial^2 u}{\partial x^2}(x) = f(x),\quad x\in \Omega=(-1,1), \\ u(x) = g(x),\quad x\in \partial\Omega. $$
+- Run the file ```main_poisson_1d.py```
+
+<figure>
+<img src=./figures/poisson1d_15pi_l2.png width=200/>
+<img src=./figures/poisson1d_15pi_u.png width=200/>
+</figure>
 
 ### The Allen-Cahn Problem
 
@@ -105,44 +105,39 @@ kwargs = {  'N_particle': 200,     # The number of particles
         u(t,-1) = u(t,1),\ u_x(t,-1) = u_x(t,1),
     \end{cases}
     $$
-- Run the file ```mian_allen_cahn_1d.py```
-- The result:
-    <figure>
-    <img src=./figures/allen_cahn_u.png width=200/>
-    <img src=./figures/allen_cahn_pred_ParticleWNN.png width=200/>
-    </figure>
+- Run the file ```main_allen_cahn_1d.py```
+
+<figure>
+<img src=./figures/allen_cahn_u.png width=200/>
+<img src=./figures/allen_cahn_pred_ParticleWNN.png width=200/>
+</figure>
 
 ### The steady NS Problem
 
 - In non-dimensional form, the mathematical model is given as
     $$
-        \begin{cases}
-            -\nu \Delta\bm{u} + (\bm{u}\cdot\nabla)\bm{u} + \nabla p = 0,\quad \text{in}\ \Omega=[-1,1]\times[-1,1], \\
-            \nabla\cdot\bm{u} = 0, \quad \text{in}\ \Omega
-        \end{cases}
+    \begin{cases}
+        -\nu \Delta\bm{u} + (\bm{u}\cdot\nabla)\bm{u} + \nabla p = 0,\quad \text{in}\ \Omega=[-1,1]\times[-1,1], \\
+        \nabla\cdot\bm{u} = 0, \quad \text{in}\ \Omega
+    \end{cases}
     $$
     where $\nu$ indicates the viscosity coefficient; $\bm{u}=(u,v)$ and $p$ are the velocity field and the pressure field, respectively. This equation has the following analytical solution
     $$
-        u(x,y) = 1-e^{\lambda x}\cos(\omega y),\quad
-        v(x,y) = \frac{\lambda}{\omega}e^{\lambda x}\sin(\omega y),\quad
-        p(x,y) = \frac{1}{2}(1-e^{2\lambda x}),
+    u(x,y) = 1-e^{\lambda x}\cos(\omega y),\quad
+    v(x,y) = \frac{\lambda}{\omega}e^{\lambda x}\sin(\omega y),\quad
+    p(x,y) = \frac{1}{2}(1-e^{2\lambda x}),
     $$
     where
     $$
-        \lambda = \frac{1}{2\nu} - \sqrt{\frac{1}{4\nu^2} + \omega^2}.
+    \lambda = \frac{1}{2\nu} - \sqrt{\frac{1}{4\nu^2} + \omega^2}.
     $$
-- Run the file ```mian_NS_Kovasznay_2d.py```
-- The result:
-    <!-- <figure>
-    <img src=./figures/NS_steady_l2_u.png width=145/>
-    <img src=./figures/NS_steady_l2_v.png width=145/>
-    <img src=./figures/NS_steady_l2_p.png width=145/>
-    </figure> -->
-    <figure>
-    <img src=./figures/NS_steady_u_ParticleWNN.png width=145/>
-    <img src=./figures/NS_steady_v_ParticleWNN.png width=145/>
-    <img src=./figures/NS_steady_p_ParticleWNN.png width=145/>
-    </figure>
+- Run the file ```main_NS_Kovasznay_2d.py```
+
+<figure>
+<img src=./figures/NS_steady_u_ParticleWNN.png width=145/>
+<img src=./figures/NS_steady_v_ParticleWNN.png width=145/>
+<img src=./figures/NS_steady_p_ParticleWNN.png width=145/>
+</figure>
 
 ### The 2d Inverse Problem
 
@@ -152,14 +147,14 @@ kwargs = {  'N_particle': 200,     # The number of particles
     $$
     where $u$ is the solution of the equation, $f$ indicates the source term, and $a$ represents the coefficient. Given the source term $f$, the inverse problem is to identify the coefficient $a$ with inexact measurements $u^{\delta}$ 
 where $\delta$ indicates Gaussian noise.
-- Run the file ```mian_inverse_poisson_2d.py```
-- The reuslt:
-    <figure>
-    <img src=./figures/inverse_a.png width=200/>
-    <img src=./figures/inverse_u.png width=200/>
-    <img src=./figures/inverse_001_k_ParticleWNN.png width=200/>
-    <img src=./figures/inverse_001_u_ParticleWNN.png width=200/>
-    </figure>
+- Run the file ```main_inverse_poisson_2d.py```
+
+<figure>
+<img src=./figures/inverse_a.png width=200/>
+<img src=./figures/inverse_u.png width=200/>
+<img src=./figures/inverse_001_k_ParticleWNN.png width=200/>
+<img src=./figures/inverse_001_u_ParticleWNN.png width=200/>
+</figure>
 
 ## References
 
