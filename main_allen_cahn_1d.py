@@ -66,7 +66,7 @@ class Example():
                                     save_path=save_path+f'{solver_name}_{inx}/', 
                                     load_path=load_path+f'{solver_name}_{inx}/', 
                                     load_type='model_best_error', 
-                                    action='train', **{'lr':args['lr']})
+                                    action='train', **args)
 
     def pred(self, inx:int, tloc_list:list, load_path:str, solver_name:str, **args):
         '''
@@ -76,7 +76,7 @@ class Example():
                                     save_path=None, 
                                     load_path=load_path+f'{solver_name}_{inx}/', 
                                     load_type= 'model_best_error', 
-                                    action='predict', **{'lr':args['lr']})
+                                    action='predict', **args)
 if __name__=='__main__':
     from Problems.Allen_Cahn_1d import Problem
     demo = Example(np_type=np.float64, torch_type=torch.float64)

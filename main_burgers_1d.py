@@ -27,23 +27,23 @@ class Example():
         #
         Nt_slice = tloc_list[-1][1]
         ############ 
-        kwargs = {'Nt_particle': 100,
-                  'Nx_particle': 1,
-                  'Nt_bd': 50,
+        kwargs = {'Nt_particle': 1000,
+                  'Nx_particle': 5,
+                  'Nt_bd': 200,
                   'Nx_bd_each_face': 1,
-                  'Nx_init': 50,
+                  'Nx_init': 200,
                   'Nx_int': 25,
                   'R_max': 1e-4,
-                  'R_min': 1e-4,
-                  'maxIter': 501,
+                  'R_min': 1e-6,
+                  'maxIter': 50000,
                   'lr': lr,
                   'model_type': 'FeedForward_Sin',
                   'data_type': {'numpy':self.np_type, 'torch':self.torch_type},
-                  'lr_Decay': 1.,
-                  'loss_weight': {'eq':1., 'bd':1., 'init':1.},
-                  'topK': 200,
+                  'lr_Decay': 2.,
+                  'loss_weight': {'eq':100., 'bd':5., 'init':50.},
+                  'topK': 4000,
                   'int_method': 'mesh', 
-                  'hidden_width': 50,
+                  'hidden_width': 100,
                   'hidden_layer': 3,
                   'activation': 'tanh',
                   'tloc_list': tloc_list,
@@ -68,7 +68,7 @@ class Example():
                                     load_type='model_best_error', 
                                     action='train', **args)
 
-    def pred(self, inx:int, tloc_list:list, load_path:str, solver_name:str):
+    def pred(self, inx:int, tloc_list:list, load_path:str, solver_name:str, **args):
         '''
         '''
         if solver_name=='ParticleWNN':
@@ -80,7 +80,7 @@ class Example():
 
 if __name__=='__main__':
     from Problems.Burgers_1d import Problem
-    demo = Example(np_type=np.float32, torch_type=torch.float32)
+    demo = Example(np_type=np.float64, torch_type=torch.float64)
     solver_names = ['ParticleWNN']
     path = f"./savedModel/{Problem().name}/"
     args = {'lr':1e-3}

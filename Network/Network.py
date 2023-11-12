@@ -99,7 +99,8 @@ class FeedForward_Sin(nn.Module):
         x = self.fc_in(x)
         ############################
         for fc_hidden in self.fc_hidden_list:
-            x = self.activation(self.fun_sin(fc_hidden(x))) + x
+            x = self.fun_sin(x)
+            x = self.activation(fc_hidden(x)) + x
 
         return self.fc_out(x)
     
