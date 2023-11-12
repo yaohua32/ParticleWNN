@@ -23,8 +23,8 @@ class Problem(Module.Problem):
                  testFun_type:str='Wendland', **args):
         '''
         The 1d poisson problem:
-            - u''(x) = f(x)   in [-2,2]
-            u(x)   = g(x)   in {-2,2}
+            - u''(x) = f(x)   in [-1,1]
+            u(x)   = g(x)   in {-1,1}
         Input:
             dtype: np.float
             testFun_type: str='Wendland'
