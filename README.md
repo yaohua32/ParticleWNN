@@ -2,6 +2,8 @@
 
 This repository is the official implementation of the [ParticleWNN](https://arxiv.org/abs/2305.12433).
 
+**NOTE:** A more recent implementation of the ParticleWNN method is available in a dedicated repository: [PhysicsDriven-DL4PDEs](https://github.com/yaohua32/PhysicsDriven-DL4PDEs/tree/main). This updated version is more user-friendly, easier to follow, and includes a broader range of PDE examples.
+
 ## Table of Contents
 
 - [ParticleWNN: a novel weak form DNN-based method for solving PDE forward and inverse problems](#particlewnn-a-novel-weak-form-dnn-based-method-for-solving-pde-forward-and-inverse-problems)
