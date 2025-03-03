@@ -6,21 +6,19 @@ This repository is the official implementation of the [ParticleWNN](https://arxi
 
 ## Table of Contents
 
-- [ParticleWNN: a novel weak form DNN-based method for solving PDE forward and inverse problems](#particlewnn-a-novel-weak-form-dnn-based-method-for-solving-pde-forward-and-inverse-problems)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Usage](#usage)
-    - [Prerequisites](#prerequisites)
-    - [How to use?](#how-to-use)
-      - [Step 1: Define the Problem](#step-1-define-the-problem)
-      - [Step 2: Setup the Solver](#step-2-setup-the-solver)
-      - [Step 3: Set parameters and solve the problem](#step-3-set-parameters-and-solve-the-problem)
-  - [Examples](#examples)
-    - [The 1d Poisson's Problem](#the-1d-poissons-problem)
-    - [The Allen-Cahn Problem](#the-allen-cahn-problem)
-    - [The steady NS Problem](#the-steady-ns-problem)
-    - [The 2d Inverse Problem](#the-2d-inverse-problem)
-  - [References](#references)
+- Introduction
+- Usage
+  - Prerequisites
+  - How to use?
+    - Step 1: Define the Problem
+    - Step 2: Setup the Solver
+    - Step 3: Set parameters and solve the problem
+- Examples
+  - The 1d Poisson's Problem
+  - The Allen-Cahn Problem
+  - The steady NS Problem
+  - The 2d Inverse Problem
+- References
 
 ## Introduction
 
