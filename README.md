@@ -1,7 +1,7 @@
 # ParticleWNN: a novel weak form DNN-based method for solving PDE forward and inverse problems
 
 
-**📢 NOTE: A more recent implementation of the [ParticleWNN](https://arxiv.org/abs/2305.12433) method is available in a dedicated repository: [PhysicsDriven-DL4PDEs](https://github.com/yaohua32/PhysicsDriven-DL4PDEs/tree/main). This updated version is more user-friendly, easier to follow, and includes a broader range of PDE examples.**
+**📢 NOTE: A more recent implementation of the [ParticleWNN](https://arxiv.org/abs/2305.12433) method is available in a dedicated repository: [Physics-Driven-Deep-Learning-for-PDEs](https://github.com/yaohua32/Physics-Driven-Deep-Learning-for-PDEs). This updated version is more user-friendly, easier to follow, and includes a broader range of PDE examples.**
 
 ## Table of Contents
 
