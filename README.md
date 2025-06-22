@@ -1,7 +1,7 @@
 # ParticleWNN: a novel weak form DNN-based method for solving PDE forward and inverse problems
 
 
-**Note (1): A more recent implementation of the [ParticleWNN](https://arxiv.org/abs/2305.12433) method is available in a dedicated repository: [[Physics-Driven-Deep-Learning-for-PDEs](https://github.com/yaohua32/Physics-Driven-Deep-Learning-for-PDEs)](https://github.com/yaohua32/Physics-Driven-Deep-Learning-for-PDEs). This updated version is more user-friendly, easier to follow, and includes a broader range of PDE examples.**
+**Note (1): A more recent implementation of the [ParticleWNN](https://arxiv.org/abs/2305.12433) method is available in a dedicated repository: [https://github.com/yaohua32/Physics-Driven-Deep-Learning-for-PDEs](https://github.com/yaohua32/Physics-Driven-Deep-Learning-for-PDEs). This updated version is more user-friendly, easier to follow, and includes a broader range of PDE examples.**
 
 **Note (2):** We have also developed a novel deep neural operator method for solving parametric PDEs and related inverse problems based on the ParticleWNN method, named **DGenNO**. This is the first deep neural operator method based on the **weak form** for solving PDEs **without any labeled training pairs**. One can refer to the work **[DGenNO](https://www.sciencedirect.com/science/article/pii/S0021999125004206)** and its implementation through the link: [https://github.com/yaohua32/Deep-Neural-Operators-for-PDEs](https://github.com/yaohua32/Deep-Neural-Operators-for-PDEs), where a comparison between DGenNO and other DNOs, such as DeepONet, FNO, PI-DeepONet, and PINO, on several benchmark PDE problems is provided.
 
